@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Metadjioo</title>
+    <!--Bootstrap CSS-->
+    <link href="css/bs-css/bootstrap.min.css" rel="stylesheet">
+    <!--Personnal CSS-->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<div id="background-game" class="container-fluid text-white">
+    <div class="row vh-100">
+        <div class="col-12 col-md-6 d-flex justify-content-center align-items-center flex-column">
+            <p class="text-center lead">Add the names of participants</p>
+            <ul id="list_participant" class="list-group">
+            </ul>
+        </div>
+        <div class="col-12 col-md-6 d-flex justify-content-center align-items-center flex-column">
+            <form id="form_players" class="p-4" onsubmit='submit_name_player();return false'>
+                <div class="form-floating">
+                    <input type="name" class="form-control" name="nbp" id="nb_players" minlength="1" maxlength="20" placeholder="" value=""">
+                    <label class="text-black" for="nb_players" >Player 1 name</label>
+                </div>
+                <button type="submit" class="btn btn-dark w-100 mt-4">Add</button>
+            </form>
+            <form id="form_validate_players" class="p-4" onsubmit='submit_name_player();return false'>
+                <p class="text-center lead">Are the names of the participants correct?</p>
+                <div class="d-flex mt-4">
+                    <button type="submit" class="btn btn-dark w-100">Yes</button>
+                    <button type="submit" class="ms-2 btn btn-dark w-100">No</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--Jquery-->
+<script src="js/jquery-3.6.0.js"></script>
+<!--Bootstrap JS-->
+<script src="js/bs-js/bootstrap.min.js"></script>
+<!--Personnal JS-->
+<script src="js/game_global.js"></script>
+<script src="js/game_choose_player.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+
+:root{
+    --game-color-1: #9DCC66;
+    --game-color-2: #CA7DD4;
+    --game-color-3: #CC7E66;
+    --game-color-4: #C85B81;
+    --game-color-5: #90CADA;
+    --game-color-6: #8587D6;
+    --game-color-7: #94DBA5;
+    --game-color-8: #B6CB62;
+
+    /*--game-color-1: black;*/
+    /*--game-color-2: black;*/
+    /*--game-color-3: black;*/
+    /*--game-color-4: black;*/
+    /*--game-color-5: black;*/
+    /*--game-color-6: black;*/
+    /*--game-color-7: black;*/
+    /*--game-color-8: black;*/
+}
+
+
+.game-color-1{
+    background-color: var(--game-color-1);
+}
+
+.game-color-2{
+    background-color: var(--game-color-2);
+}
+
+.game-color-3{
+    background-color: var(--game-color-3);
+}
+
+.game-color-4{
+    background-color: var(--game-color-4);
+}
+
+.game-color-5{
+    background-color: var(--game-color-5);
+}
+
+.game-color-6{
+    background-color: var(--game-color-6);
+}
+
+.game-color-7{
+    background-color: var(--game-color-7);
+}
+
+.game-color-8{
+    background-color: var(--game-color-8);
+}
+
+html{
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+.mvh-100{
+    min-height: 100vh;
+}
+
+#list_button{
+    width: 300px;
+}
+
+#form_nb_player{
+    background-color: rgba(255, 255, 255, 0.15);
+    width: 400px;
+    border-radius: 10px;
+}
+
+#list_participant{
+    background-color: rgba(255, 255, 255, 0.15);
+    width: 300px;
+}
