@@ -1,13 +1,13 @@
 
 :root{
-    --game-color-1: #9DCC66;
-    --game-color-2: #CA7DD4;
-    --game-color-3: #CC7E66;
-    --game-color-4: #C85B81;
-    --game-color-5: #90CADA;
-    --game-color-6: #8587D6;
-    --game-color-7: #94DBA5;
-    --game-color-8: #B6CB62;
+    --game-color-1: #8cc44f;
+    --game-color-2: #b660c1;
+    --game-color-3: #c36f56;
+    --game-color-4: #b84e73;
+    --game-color-5: #5db7cf;
+    --game-color-6: #6f71c8;
+    --game-color-7: #56b083;
+    --game-color-8: #c1c043;
 
     /*--game-color-1: black;*/
     /*--game-color-2: black;*/
@@ -19,36 +19,55 @@
     /*--game-color-8: black;*/
 }
 
+#background_game{
+    transition: 1s;
+}
 
-.game-color-1{
+div.game-color-1,
+.form-range.game-color-1::-webkit-slider-thumb,
+.form-range.game-color-1::-moz-range-thumb {
     background-color: var(--game-color-1);
 }
 
-.game-color-2{
+div.game-color-2,
+.form-range.game-color-2::-webkit-slider-thumb,
+.form-range.game-color-2::-moz-range-thumb{
     background-color: var(--game-color-2);
 }
 
-.game-color-3{
+div.game-color-3,
+.form-range.game-color-3::-webkit-slider-thumb,
+.form-range.game-color-3::-moz-range-thumb{
     background-color: var(--game-color-3);
 }
 
-.game-color-4{
+div.game-color-4,
+.form-range.game-color-4::-webkit-slider-thumb,
+.form-range.game-color-4::-moz-range-thumb{
     background-color: var(--game-color-4);
 }
 
-.game-color-5{
+div.game-color-5,
+.form-range.game-color-5::-webkit-slider-thumb,
+.form-range.game-color-5::-moz-range-thumb{
     background-color: var(--game-color-5);
 }
 
-.game-color-6{
+div.game-color-6,
+.form-range.game-color-6::-webkit-slider-thumb,
+.form-range.game-color-6::-moz-range-thumb{
     background-color: var(--game-color-6);
 }
 
-.game-color-7{
+div.game-color-7,
+.form-range.game-color-7::-webkit-slider-thumb,
+.form-range.game-color-7::-moz-range-thumb{
     background-color: var(--game-color-7);
 }
 
-.game-color-8{
+div.game-color-8,
+.form-range.game-color-8::-webkit-slider-thumb,
+.form-range.game-color-8::-moz-range-thumb{
     background-color: var(--game-color-8);
 }
 
@@ -70,13 +89,32 @@ body{
     width: 300px;
 }
 
-#form_nb_player{
+.form_white_background{
     background-color: rgba(255, 255, 255, 0.15);
     width: 400px;
+    border-radius: 10px;
+}
+
+#form_choices{
+    background-color: rgba(255, 255, 255, 0.15);
+    width: 100%;
     border-radius: 10px;
 }
 
 #list_participant{
     background-color: rgba(255, 255, 255, 0.15);
     width: 300px;
+}
+
+.range_wine_choice{
+    display: block;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    box-shadow: -1px 2px 5px 1px rgba(0,0,0,0.05);
+}
+
+#head_range{
+    box-shadow: -1px 2px 5px 1px rgba(0,0,0,0.05);
+    background-color: rgba(33, 37, 41, 0.5);
+    border-radius: 10px;
 }

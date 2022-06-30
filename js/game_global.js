@@ -1,11 +1,18 @@
 function change_color_background(){
-    let elem = $("#background-game");
+    let elem = $("#background_game");
     remove_class_background_color(elem)
     elem.addClass(random_class_color_background());
 }
 
 function random_class_color_background(){
-    return "game-color-"+(Math.floor(Math.random() * 7)+1);
+    let previous_class_color = localStorage.getItem('class_color');
+    let class_color
+    do{
+        class_color = "game-color-"+(Math.floor(Math.random() * 7)+1);
+    } while(previous_class_color === class_color)
+
+    localStorage.setItem('class_color', class_color);
+    return class_color;
 }
 
 function remove_class_background_color(elem){

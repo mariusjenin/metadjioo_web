@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Metadjioo</title>
+    <!--Bootstrap CSS-->
+    <link href="css/bs-css/bootstrap.min.css" rel="stylesheet">
+    <!--Personnal CSS-->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<div id="background_game" class="container-fluid text-white game-color-1">
+    <div class="row mvh-100 col-12">
+        <div class="col-12 col-lg-5 col-xxl-6 d-flex justify-content-center align-items-center flex-column my-4">
+            <p id="title_turn" class="text-center display-2">'s turn !</p>
+        </div>
+        <div class="col-12 col-lg-7 col-xxl-5 mb-3 d-flex justify-content-center align-items-center flex-column">
+            <form id="form_choices" class="p-3" onsubmit='submit_choices();return false'>
+
+                <div id="head_range" class="px-3 py-2 mb-2 d-flex justify-content-between">
+                    <div>0</div><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div>
+                </div>
+
+                <div class="px-3 py-1 mb-2 range_wine_choice text-dark d-flex flex-column align-items-center">
+                    <label for="tannic" class="form-label">Tannic</label>
+                    <input type="range" class="form-range game-color-1" min="0" max="5" step="1" id="tannic" value="0" oninput="$(this).parent().find('.value_range').html(this.value)">
+                </div>
+
+                <div class="px-3 py-1 my-2 range_wine_choice text-dark d-flex flex-column align-items-center">
+                    <label for="woody" class="form-label">Woody</label>
+                    <input type="range" class="form-range game-color-2" min="0" max="5" step="1" id="woody" value="0" oninput="$(this).parent().find('.value_range').html(this.value)">
+                </div>
+
+                <div class="px-3 py-1 my-2 range_wine_choice text-dark d-flex flex-column align-items-center">
+                    <label for="fruity" class="form-label">Fruity</label>
+                    <input type="range" class="form-range game-color-3" min="0" max="5" step="1" id="fruity" value="0" oninput="$(this).parent().find('.value_range').html(this.value)">
+                </div>
+
+                <div class="px-3 py-1 my-2 range_wine_choice text-dark d-flex flex-column align-items-center">
+                    <label for="mineral" class="form-label">Mineral</label>
+                    <input type="range" class="form-range game-color-4" min="0" max="5" step="1" id="mineral" value="0" oninput="$(this).parent().find('.value_range').html(this.value)">
+                </div>
+
+                <div class="px-3 py-1 my-2 range_wine_choice text-dark d-flex flex-column align-items-center">
+                    <label for="floral" class="form-label">Floral</label>
+                    <input type="range" class="form-range game-color-5" min="0" max="5" step="1" id="floral" value="0" oninput="$(this).parent().find('.value_range').html(this.value)">
+                </div>
+
+                <div class="px-3 py-1 my-2 range_wine_choice text-dark d-flex flex-column align-items-center">
+                    <label for="spicy" class="form-label">Spicy</label>
+                    <input type="range" class="form-range game-color-6" min="0" max="5" step="1" id="spicy" value="0" oninput="$(this).parent().find('.value_range').html(this.value)">
+                </div>
+
+                <div class="px-3 py-1 mt-2 range_wine_choice text-dark d-flex flex-column align-items-center">
+                    <label for="acidic" class="form-label">Acidic</label>
+                    <input type="range" class="form-range game-color-7" min="0" max="5" step="1" id="acidic" value="0" oninput="$(this).parent().find('.value_range').html(this.value)">
+                </div>
+                <button type="submit" class="btn btn-dark w-100 mt-4">Validate</button>
+            </form>
+        </div>
+    </div>
+</div>
+<!--Jquery-->
+<script src="js/jquery-3.6.0.js"></script>
+<!--Bootstrap JS-->
+<script src="js/bs-js/bootstrap.min.js"></script>
+<!--Personnal JS-->
+<script src="js/game_global.js"></script>
+<script src="js/Wine.js"></script>
+<script src="js/game_play.js"></script>
+</body>
+</html>
