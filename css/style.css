@@ -8,15 +8,6 @@
     --game-color-6: #6f71c8;
     --game-color-7: #56b083;
     --game-color-8: #c1c043;
-
-    /*--game-color-1: black;*/
-    /*--game-color-2: black;*/
-    /*--game-color-3: black;*/
-    /*--game-color-4: black;*/
-    /*--game-color-5: black;*/
-    /*--game-color-6: black;*/
-    /*--game-color-7: black;*/
-    /*--game-color-8: black;*/
 }
 
 #background_game{
@@ -91,11 +82,11 @@ body{
 
 .form_white_background{
     background-color: rgba(255, 255, 255, 0.15);
-    width: 400px;
+    width: 300px;
     border-radius: 10px;
 }
 
-#form_choices{
+#form_choices, #result_display{
     background-color: rgba(255, 255, 255, 0.15);
     width: 100%;
     border-radius: 10px;
@@ -114,7 +105,44 @@ body{
 }
 
 #head_range{
+    font-size: 1.4em;
     box-shadow: -1px 2px 5px 1px rgba(0,0,0,0.05);
     background-color: rgba(33, 37, 41, 0.5);
     border-radius: 10px;
+}
+
+.label_range{
+    background-color: #ffffff;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 4px 8px;
+}
+
+#title_result{
+    transition: 0.5s;
+}
+
+.bubble_hover_range{
+    bottom:80px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+}
+
+#result_card{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+.form-range::-webkit-slider-thumb,
+.form-range::-moz-range-thumb{
+    padding: 7px;
+}
+
+.form-range{
+    cursor: grab;
+}
+
+.form-range:active:not(disabled){
+    cursor: grabbing;
 }

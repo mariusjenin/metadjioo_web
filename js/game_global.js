@@ -39,3 +39,26 @@ function find_get_parameter(parameter_name) {
     }
     return result;
 }
+
+function setup_hover(){
+    let label_range = $(".label_range")
+    label_range.hover(
+        function() {
+            $(this).parent().find('.bubble_hover_range').show(100)
+        },
+        function() {
+            $(this).parent().find('.bubble_hover_range').hide(100)
+        }
+    );
+    label_range.click(
+        function() {
+            let bubble =$(this).parent().find('.bubble_hover_range');
+
+            if(bubble.is(":visible")){
+                $(this).parent().find('.bubble_hover_range').hide(100)
+            } else {
+                $(this).parent().find('.bubble_hover_range').show(100)
+            }
+        }
+    );
+}

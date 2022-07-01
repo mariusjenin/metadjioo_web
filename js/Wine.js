@@ -8,6 +8,9 @@ class Wine{
         this.spicy = spi
         this.acidic = aci
     }
+    set_name(name){
+        this.name = name
+    }
     constructor(tan=-1,woo=-1,fru=-1,min=-1,flo=-1,spi=-1,aci=-1) {
         this.set(tan,woo,fru,min,flo,spi,aci)
     }

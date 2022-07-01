@@ -12,13 +12,12 @@
 <body>
 <div id="background_game" class="container-fluid text-white game-color-1">
     <div class="row mvh-100">
-        <div class="col-12 col-lg-5 col-xxl-6 d-flex justify-content-center align-items-center flex-column my-4">
-            <p id="title_turn" class="text-center display-2"></p>
-            <p  class="text-center lead">Find the right flavours in the wine you are tasting! <br/>You will be able to compare your score with the one of your friends!</p>
-        </div>
-        <div class="col-12 col-lg-7 col-xxl-5 mb-3 d-flex justify-content-center align-items-center flex-column">
-            <form id="form_choices" class="p-3" onsubmit='submit_choices();return false'>
+        <div class="col-12 col-lg-4 offset-lg-1 order-1 order-lg-0 d-flex flex-column justify-content-center align-items-center p-4">
+            <div id="result_display" class="p-3">
 
+                <div class="text-center display-5 pb-4">
+                    Results
+                </div>
                 <div id="head_range" class="px-3 py-1 mb-2 d-flex justify-content-between">
                     <div>0</div><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div>
                 </div>
@@ -28,7 +27,7 @@
                         The phenolic compounds in wines that leave a bitter, dry, and puckery feeling in the mouth
                     </div>
                     <label for="tannic" class="form-label label_range">Tannic</label>
-                    <input type="range" class="form-range game-color-1" min="0" max="5" step="1" id="tannic" value="0">
+                    <input type="range" disabled class="form-range game-color-1" min="0" max="5" step="1" id="tannic" value="0">
                 </div>
 
                 <div class="px-3 py-2 my-2 range_wine_choice d-flex flex-column align-items-center position-relative text-dark">
@@ -37,7 +36,7 @@
                         nuances which oak imparts can impart into wine. It may have overwhelming notes of smoke, toast and more
                     </div>
                     <label for="woody" class="form-label label_range">Woody</label>
-                    <input type="range" class="form-range game-color-2" min="0" max="5" step="1" id="woody" value="0">
+                    <input type="range" disabled class="form-range game-color-2" min="0" max="5" step="1" id="woody" value="0">
                 </div>
 
                 <div class="px-3 py-2 my-2 range_wine_choice d-flex flex-column align-items-center position-relative text-dark">
@@ -45,7 +44,7 @@
                         A tasting term for wines that exhibit strong smells and flavors of fresh fruit
                     </div>
                     <label for="fruity" class="form-label label_range">Fruity</label>
-                    <input type="range" class="form-range game-color-3" min="0" max="5" step="1" id="fruity" value="0">
+                    <input type="range" disabled class="form-range game-color-3" min="0" max="5" step="1" id="fruity" value="0">
                 </div>
 
                 <div class="px-3 py-2 my-2 range_wine_choice d-flex flex-column align-items-center position-relative text-dark">
@@ -54,7 +53,7 @@
                         'pure' and 'acid'. They have a taste as if of licking wet stones and often a chalky texture to match
                     </div>
                     <label for="mineral" class="form-label label_range">Mineral</label>
-                    <input type="range" class="form-range game-color-4" min="0" max="5" step="1" id="mineral" value="0">
+                    <input type="range" disabled class="form-range game-color-4" min="0" max="5" step="1" id="mineral" value="0">
                 </div>
 
                 <div class="px-3 py-2 my-2 range_wine_choice d-flex flex-column align-items-center position-relative text-dark">
@@ -64,7 +63,7 @@
                         primary aromas, which means they come from the grapes themselves rather than winemaking techniques or aging
                     </div>
                     <label for="floral" class="form-label label_range">Floral</label>
-                    <input type="range" class="form-range game-color-5" min="0" max="5" step="1" id="floral" value="0">
+                    <input type="range" disabled class="form-range game-color-5" min="0" max="5" step="1" id="floral" value="0">
                 </div>
 
                 <div class="px-3 py-2 my-2 range_wine_choice d-flex flex-column align-items-center position-relative text-dark">
@@ -73,7 +72,7 @@
                         baking spices, oregano, rosemary, thyme, saffron, or paprika found in certain wines
                     </div>
                     <label for="spicy" class="form-label label_range">Spicy</label>
-                    <input type="range" class="form-range game-color-6" min="0" max="5" step="1" id="spicy" value="0">
+                    <input type="range" disabled class="form-range game-color-6" min="0" max="5" step="1" id="spicy" value="0">
                 </div>
 
                 <div class="px-3 py-2 mt-2 range_wine_choice d-flex flex-column align-items-center position-relative text-dark">
@@ -81,20 +80,35 @@
                         The liveliness and crispness in wine that activates our salivary glands
                     </div>
                     <label for="acidic" class="form-label label_range">Acidic</label>
-                    <input type="range" class="form-range game-color-7" min="0" max="5" step="1" id="acidic" value="0">
+                    <input type="range" disabled class="form-range game-color-7" min="0" max="5" step="1" id="acidic" value="0">
                 </div>
-                <button type="submit" class="btn btn-dark w-100 mt-4">Next player</button>
-            </form>
+            </div>
         </div>
-    </div>
-</div>
-<!--Jquery-->
-<script src="js/jquery-3.6.0.js"></script>
-<!--Bootstrap JS-->
-<script src="js/bs-js/bootstrap.min.js"></script>
-<!--Personnal JS-->
-<script src="js/game_global.js"></script>
-<script src="js/Wine.js"></script>
-<script src="js/game_play.js"></script>
+        <div class="col-12 col-lg-7 order-0 order-lg-0 d-flex justify-content-center align-items-center flex-column my-4">
+            <p id="title_result" class="text-center display-2 mb-5"></p>
+            <div class="row w-100 px-5 mb-3 d-flex align-items-center flex-column">
+                <div class="col-12 col-lg-8">
+                    <table id="result_card" class="table">
+                        <thead class="table-dark">
+                        <tr>
+                            <th scope="col">Ranking</th>
+                            <th scope="col">Participant</th>
+                            <th scope="col">Score</th>
+                        </tr>
+                        </thead>
+                        <tbody class="table-group-divider">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!--Jquery-->
+        <script src="js/jquery-3.6.0.js"></script>
+        <!--Bootstrap JS-->
+        <script src="js/bs-js/bootstrap.min.js"></script>
+        <!--Personnal JS-->
+        <script src="js/game_global.js"></script>
+        <script src="js/Wine.js"></script>
+        <script src="js/game_end.js"></script>
 </body>
 </html>

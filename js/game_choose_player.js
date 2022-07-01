@@ -18,7 +18,7 @@ function init(){
 function next_player(){
     current_player++
     input.val("")
-    label.html("Player "+current_player+" name")
+    label.html("Player "+(current_player+1)+" name")
 }
 
 function submit_name_player(){
